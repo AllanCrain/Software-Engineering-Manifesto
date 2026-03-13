@@ -1,65 +1,85 @@
 # The Software Engineering Manifesto
 
----
+<br>
 
-*The Manifesto for Agile Software Development has guided our industry for over twenty-five years and its influence cannot be overstated. But the pace of change in technology, tooling, and how we deliver software has accelerated beyond what that original document envisioned. AI and the tools available today have fundamentally changed what individuals and small teams can achieve. Built on the same foundation, this is a manifesto for how software engineering works now.*
+> *The Manifesto for Agile Software Development has guided our industry for over twenty-five years and its influence cannot be overstated.*
+>
+> *But the pace of change in technology, tooling, and how we deliver software has accelerated beyond what that original document envisioned. AI and the tools available today have fundamentally changed what individuals and small teams can achieve.*
+>
+> *Built on the same foundation, this is a manifesto for how software engineering works now.*
 
----
-
-We are uncovering better ways of engineering software
-by building it and helping others build it.
-
-Through this work we have come to value:
-
-**Individuals and their tools** over processes and ceremonies
-
-**Working software** over comprehensive documentation
-
-**Continuous customer involvement** over building to a brief
-
-**Iterating on feedback** over committing to assumptions
-
-That is, while there is value in the items on the right,
-we value the items on the left more.
+<br>
 
 ---
+
+<br>
+
+### We are uncovering better ways of engineering software by building it and helping others build it.
+
+### Through this work we have come to value:
+
+<br>
+
+> **Individuals and their tools** over processes and ceremonies
+>
+> **Working software** over comprehensive documentation
+>
+> **Continuous customer involvement** over building to a brief
+>
+> **Iterating on feedback** over committing to assumptions
+
+<br>
+
+*That is, while there is value in the items on the right, we value the items on the left more.*
+
+<br>
+
+---
+
+<br>
 
 ## Principles Behind the Manifesto
 
 *We follow these principles:*
 
-Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
+<br>
 
-Welcome changing requirements driven by learning; resist change driven by indecision.
+1. Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
 
-Deliver and deploy continuously in small increments, but manage the rate of change that customers experience.
+2. Welcome changing requirements driven by learning; resist change driven by indecision.
 
-Deep understanding of the problem precedes every good solution.
+3. Deliver and deploy continuously in small increments, but manage the rate of change that customers experience.
 
-Working software is the best tool for discovering requirements.
+4. Deep understanding of the problem precedes every good solution.
 
-Continuous automated verification and deliberate human review are as important as the code they validate.
+5. Working software is the best tool for discovering requirements.
 
-Continuous attention to technical excellence and sound architecture enhances sustainable delivery.
+6. Continuous automated verification and deliberate human review are as important as the code they validate.
 
-Documentation is operational infrastructure, not overhead — it should live alongside the code it describes.
+7. Continuous attention to technical excellence and sound architecture enhances sustainable delivery.
 
-Simplicity — the art of maximising the amount of work not done — is essential.
+8. Documentation is operational infrastructure, not overhead — it should live alongside the code it describes.
 
-Build around motivated individuals with tools that amplify their capability, and trust them to get the job done.
+9. Simplicity — the art of maximising the amount of work not done — is essential.
 
-Roles converge around the customer problem — everyone shaping a product should be deep in their discipline and capable across the others.
+10. Build around motivated individuals with tools that amplify their capability, and trust them to get the job done.
 
-Effective collaboration requires clear communication and shared context.
+11. Roles converge around the customer problem — everyone shaping a product should be deep in their discipline and capable across the others.
 
-Processes should promote sustainable development at a consistent pace that protects team health.
+12. Effective collaboration requires clear communication and shared context.
 
-A working product is the primary measure of progress and the ultimate purpose of engineering.
+13. Processes should promote sustainable development at a consistent pace that protects team health.
 
-At regular intervals, the team reflects on how to become more effective, then adjusts accordingly.
+14. A working product is the primary measure of progress and the ultimate purpose of engineering.
 
+15. At regular intervals, the team reflects on how to become more effective, then adjusts accordingly.
 
+<br>
+
+---
+
+<br>
 
 © 2026 Allan Crain. This declaration may be freely shared with attribution to the original author.
 
-Please reach out to me if you would like to help build on this
+Please reach out to me if you would like to help build on this.
