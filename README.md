@@ -22,11 +22,13 @@
 
 > **Individuals and their tools** over processes and ceremonies
 >
-> **Working software** over comprehensive documentation
->
 > **Continuous customer involvement** over building to a brief
 >
 > **Iterating on feedback** over committing to assumptions
+>
+> **Understanding the problem** over speed to solution
+>
+> **Sustainable delivery** over short-term output
 
 <br>
 
@@ -44,7 +46,7 @@
 
 <br>
 
-1. Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
+1. Our highest priority is a working product that delivers value to the customer.
 
 2. Welcome changing requirements driven by learning; resist change driven by indecision.
 
@@ -66,13 +68,11 @@
 
 11. Roles converge around the customer problem — everyone shaping a product should be deep in their discipline and capable across the others.
 
-12. Effective collaboration requires clear communication and shared context.
+12. Work should be done at a sustainable pace that protects both the people and their ability to deliver, indefinitely.
 
-13. Processes should promote sustainable development at a consistent pace that protects team health.
+13. At regular intervals, the team reflects on how to become more effective, then adjusts accordingly.
 
-14. A working product is the primary measure of progress and the ultimate purpose of engineering.
-
-15. At regular intervals, the team reflects on how to become more effective, then adjusts accordingly.
+14. Accountability for the software cannot be delegated to the tools used to build it.
 
 <br>
 
