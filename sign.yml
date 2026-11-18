@@ -1,0 +1,30 @@
+name: Sign the manifesto
+description: Add your name to the list of signatories
+title: "Sign the manifesto"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this in and submit. Your name is added to the signatories list automatically, alongside your GitHub handle.
+  - type: input
+    id: name
+    attributes:
+      label: Full name
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Role
+      placeholder: e.g. Staff Engineer
+  - type: input
+    id: company
+    attributes:
+      label: Company
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have read the manifesto and I am signing in my own name.
+          required: true
