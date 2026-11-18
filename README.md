@@ -18,7 +18,6 @@
 
 *Grounded in what hasn't changed and shaped by what has, this is a manifesto for how software engineering works now.*
 
-*— Allan Crain*
 
 ---
 
@@ -80,6 +79,8 @@ We follow these principles:
 ---
 
 ## Signatories
+
+**[Sign the manifesto](https://github.com/AllanCrain/SoftwareEngineeringManifesto/issues/new?template=sign.yml)** · [See who has signed](SIGNATORIES.md)
 
 Allan Crain, Head of Engineering, ELMO Software
 
