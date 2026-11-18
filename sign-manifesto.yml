@@ -1,0 +1,83 @@
+name: Sign the manifesto
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+# One signature at a time, so two people signing together can't clobber each other.
+concurrency:
+  group: sign-manifesto
+  cancel-in-progress: false
+
+jobs:
+  sign:
+    # Only run for issues created from the signing form.
+    if: contains(github.event.issue.body, '### Full name')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add signature
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const path = 'SIGNATORIES.md';
+            const { owner, repo } = context.repo;
+            const issue = context.payload.issue;
+            const login = issue.user.login;
+            const body = issue.body || '';
+
+            // Issue text is untrusted: keep one line, strip Markdown/HTML characters, cap the length.
+            const clean = (s) => s
+              .split('\n')[0]
+              .replace(/(https?:\/\/|www\.)\S*/gi, '')
+              .replace(/[\[\]()<>|*_`~#\\]/g, '')
+              .replace(/\s+/g, ' ')
+              .trim()
+              .slice(0, 80);
+
+            const field = (label) => {
+              const m = body.match(new RegExp(`### ${label}\\s+([\\s\\S]*?)(?=\\n### |$)`));
+              const value = m ? m[1].trim() : '';
+              return value === '_No response_' ? '' : clean(value);
+            };
+
+            const reply = async (message, close = true) => {
+              await github.rest.issues.createComment({ owner, repo, issue_number: issue.number, body: message });
+              if (close) {
+                await github.rest.issues.update({ owner, repo, issue_number: issue.number, state: 'closed' });
+              }
+            };
+
+            const name = field('Full name');
+            if (!name) {
+              await reply('Sorry, I could not read a name from this issue. Please try the form again.');
+              return;
+            }
+
+            const details = [name, field('Role'), field('Company')].filter(Boolean).join(', ');
+            const profile = `https://github.com/${login}`;
+            const line = `- ${details} ([@${login}](${profile}))`;
+
+            const file = await github.rest.repos.getContent({ owner, repo, path });
+            const current = Buffer.from(file.data.content, 'base64').toString('utf8');
+
+            // One signature per GitHub account.
+            if (current.toLowerCase().includes(`(${profile.toLowerCase()})`)) {
+              await reply(`@${login} you have already signed. Thank you!`);
+              return;
+            }
+
+            const updated = current.replace(/\s*$/, '\n') + line + '\n';
+            await github.rest.repos.createOrUpdateFileContents({
+              owner,
+              repo,
+              path,
+              message: `Add signatory (#${issue.number})`,
+              content: Buffer.from(updated, 'utf8').toString('base64'),
+              sha: file.data.sha,
+            });
+
+            await reply(`Thanks @${login}, you have been added to the [signatories](https://github.com/${owner}/${repo}/blob/main/${path}).`);
