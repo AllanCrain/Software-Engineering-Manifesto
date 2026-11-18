@@ -1,3 +1,5 @@
+# The Software Engineering Manifesto
+
 ## Preamble
 
 *The Manifesto for Agile Software Development has guided our industry for over twenty-five years, and its impact cannot be overstated.*
@@ -20,10 +22,9 @@
 
 ---
 
-# The Software Engineering Manifesto
+
 
 ## Values
-
 *Software engineering is the discipline that turns what the business needs into software that runs.*
 
 We are uncovering better ways of engineering software by building it and helping others build it.
