@@ -1,0 +1,7 @@
+title: The Software Engineering Manifesto
+description: "4 values and 15 principles for how software engineering works now that AI writes the code. Builds on the Agile Manifesto."
+author: Allan Crain
+lang: en
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
